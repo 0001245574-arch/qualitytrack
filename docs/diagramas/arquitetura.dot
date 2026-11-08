@@ -1,0 +1,7 @@
+digraph G { rankdir=LR; graph [bgcolor="white",pad="0.3",nodesep="0.45",ranksep="0.6"]; node [shape=box,style="rounded,filled",fillcolor="#eef5f3",color="#28786d",fontname="Arial",fontsize=11,margin="0.18,0.12"]; edge [color="#718096",fontname="Arial",fontsize=9]; U[label="Usuário / Inspetor"]; FE[label="Frontend React
+SPA + Vite"]; API[label="FastAPI
+Controllers / REST"]; AUTH[label="Autenticação
+Bearer Token"]; S[label="Services
+Regras de negócio"]; R[label="Repository
+SQLAlchemy"]; DB[shape=cylinder,label="SQLite
+qualitytrack.db",fillcolor="#f4f1e9",color="#a88946"]; U->FE; FE->API[label="HTTP / JSON"]; FE->AUTH[label="Login"]; AUTH->API[label="Token"]; API->S; S->R; R->DB; }

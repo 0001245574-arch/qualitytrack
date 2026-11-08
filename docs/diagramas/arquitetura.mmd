@@ -1,0 +1,7 @@
+flowchart LR
+ U[Usuário] --> FE[React SPA]
+ FE -->|HTTPS / JSON + JWT| API[FastAPI Controllers]
+ API --> S[Services / Regras de negócio]
+ S --> R[Repository]
+ R --> DB[(SQLite / SQLAlchemy)]
+ API --> AUTH[Autenticação JWT]
